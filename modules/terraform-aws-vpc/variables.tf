@@ -3,9 +3,6 @@ variable "region" {
   default = "ap-east-1"
 }
 
-variable "vpc_cidr" {
-  type = string
-}
 
 variable "name" {
   type = string
@@ -25,6 +22,7 @@ variable "availability_zones" {
 
 variable "route" {
   type = string
+  default = ""
 }
 
 variable "subnet_type" {
@@ -32,7 +30,17 @@ variable "subnet_type" {
 } 
 
 
-variable "internet_gateway_id"{
+variable "gateway_id" {
+  type = string
+  default = ""
+}
+
+
+variable "vpc_id" {
+  type = string
+}
+
+variable "route_table_id" {
   type = string
   default = ""
 }
